@@ -8,9 +8,9 @@
         "video stream",
         "pyrogram"
     ],
-    "website": "https://t.me/levinachannel",
+    "website": "https://t.me/vtbchannell",
     "repository": "https://github.com/levina-lab/video-stream",
-    "success_url": "https://t.me/dlwrml",
+    "success_url": "https://t.me/vckyclone",
     "env": {
         "API_ID": {
             "description": "your API_ID from my.telegram.org",
