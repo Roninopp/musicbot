@@ -49,7 +49,7 @@ async def _human_time_duration(seconds):
 
 
 @Client.on_message(
-    command(["starttt", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
+    command(["starttt", f"starttt@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
@@ -93,7 +93,7 @@ async def start_(client: Client, message: Message):
 
 
 @Client.on_message(
-    command(["alivevcky", f"alive@{BOT_USERNAME}"]) & filters.group & ~filters.edited
+    command(["videoalive", f"videoalive@{BOT_USERNAME}"]) & filters.group & ~filters.edited
 )
 async def alive(client: Client, message: Message):
     current_time = datetime.utcnow()
