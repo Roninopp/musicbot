@@ -24,7 +24,7 @@ bcl = InlineKeyboardMarkup(
 )
 
 
-@Client.on_message(command(["reload", f"reload@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["videoreload", f"videoreload@{BOT_USERNAME}"]) & other_filters)
 @authorized_users_only
 async def update_admin(client, message):
     global admins
@@ -34,11 +34,11 @@ async def update_admin(client, message):
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
     await message.reply_text(
-        "✅ Bot **reloaded correctly !**\n✅ **Admin list** has **updated !**"
+        "✅ Bot **loaded correctly !**\n✅ **Admin list** has **updated !**"
     )
 
 
-@Client.on_message(command(["skip", f"skip@{BOT_USERNAME}", "vskip"]) & other_filters)
+@Client.on_message(command(["videoskip", f"videoskip@{BOT_USERNAME}", "videoskip"]) & other_filters)
 @authorized_users_only
 async def skip(client, m: Message):
 
@@ -89,7 +89,7 @@ async def skip(client, m: Message):
 
 
 @Client.on_message(
-    command(["stop", f"stop@{BOT_USERNAME}", "videoend", f"end@{BOT_USERNAME}", "videostop"])
+    command(["videoend", f"stop@{BOT_USERNAME}", "videoend", f"videoend@{BOT_USERNAME}", "videoend"])
     & other_filters
 )
 @authorized_users_only
@@ -107,7 +107,7 @@ async def stop(client, m: Message):
 
 
 @Client.on_message(
-    command(["pause", f"pause@{BOT_USERNAME}", "videopause"]) & other_filters
+    command(["videopause", f"videopause@{BOT_USERNAME}", "videopause"]) & other_filters
 )
 @authorized_users_only
 async def pause(client, m: Message):
@@ -125,7 +125,7 @@ async def pause(client, m: Message):
 
 
 @Client.on_message(
-    command(["resume", f"resume@{BOT_USERNAME}", "videoresume"]) & other_filters
+    command(["videoresume", f"videoresume@{BOT_USERNAME}", "videoresume"]) & other_filters
 )
 @authorized_users_only
 async def resume(client, m: Message):
@@ -143,7 +143,7 @@ async def resume(client, m: Message):
 
 
 @Client.on_message(
-    command(["mute", f"mute@{BOT_USERNAME}", "vmute"]) & other_filters
+    command(["videomute", f"videomute@{BOT_USERNAME}", "videomute"]) & other_filters
 )
 @authorized_users_only
 async def mute(client, m: Message):
@@ -161,7 +161,7 @@ async def mute(client, m: Message):
 
 
 @Client.on_message(
-    command(["unmute", f"unmute@{BOT_USERNAME}", "videounmute"]) & other_filters
+    command(["videounmute", f"videounmute@{BOT_USERNAME}", "videounmute"]) & other_filters
 )
 @authorized_users_only
 async def unmute(client, m: Message):
@@ -278,7 +278,7 @@ async def cbunmute(_, query: CallbackQuery):
 
 
 @Client.on_message(
-    command(["volume", f"volume@{BOT_USERNAME}", "vol"]) & other_filters
+    command(["videovolume", f"videovolume@{BOT_USERNAME}", "videovolume"]) & other_filters
 )
 @authorized_users_only
 async def change_volume(client, m: Message):
